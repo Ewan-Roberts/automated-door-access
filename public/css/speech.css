@@ -1,0 +1,34 @@
+* { 
+  padding: 0;
+  margin: 0;
+}
+
+html, body, #on,#off {
+    min-height: 100% !important;
+    height: 100%;
+    text-align: center;
+    color: white;
+    font-size: 100px;
+    font-family: Sans-serif;
+
+}
+#on {
+  float: left;
+  width: 50%;
+  position: relative;
+  background-color: green;
+
+}
+
+#off {
+  float: right;
+  width: 50%;
+  position: relative;
+  background-color: red;
+  
+}
+
+#poo {
+  position: relative;
+  top: 40%;
+}

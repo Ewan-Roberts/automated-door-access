@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<head>
+    <script src="/js/socket.io.js"></script>
+    <link rel='stylesheet' href='/css/speech.css'/>
+</head>
+
+    <body>
+
+        <div id="on"> 
+            <div id="poo">ON</div>
+        </div>
+
+        <div id="off">
+        
+            <div id="poo">OFF</div>
+
+        </div>
+
+
+    </body>
+
+    <script>
+        
+        const onButton = document.getElementById('on');
+
+        onButton.onclick = function(e) {
+            console.log('on')
+            socket.emit('control', true);
+
+        }
+
+        const offButton = document.getElementById('off');
+
+        offButton.onclick = function(e) {
+            console.log('off')
+            socket.emit('control', false);
+
+        }
+
+        var socket = io();
+
+        socket.on('front', function(data) {
+            
+            console.log(data)
+
+        });
+
+        socket.emit('control', "poop");
+
+    </script>
+
+</html>
