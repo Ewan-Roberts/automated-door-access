@@ -30,7 +30,7 @@ module.exports = new events.EventEmitter();
 
 io.on('connection', socket => {
 
-	socket.emit('front', "tits")
+	socket.emit('front', "foo")
 
 	socket.on('control', data =>{
 
